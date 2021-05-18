@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @Autowired  //spring可以自动帮你把bean里面引用的对象的setter/getter方法省略，它会自动帮你set/get
     private IuserDao iuserDao;
 
     /**

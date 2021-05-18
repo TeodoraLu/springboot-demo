@@ -47,10 +47,11 @@ public class LoginController {
                         HttpSession session,
                         RedirectAttributes attributes) {
         Iuser iuser = userService.checkUser(name, password);
-        if (iuser != null) {
+        if (iuser != null) {    //不为空则表示数据库有对应值，即验证成功
             iuser.setPassword(null);
             session.setAttribute("iuser",iuser);
-            return "index";
+           // return "index"; //测试成功
+            return  "/admin/index";
         } else {
             attributes.addFlashAttribute("message", "用户名和密码错误");
             return "redirect:/admin";

@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * IUSER
  */
-@Data
+@Data//为类提供读写属性（提供get/set方法）
 public class Iuser implements Serializable {
     private Integer id;
 
