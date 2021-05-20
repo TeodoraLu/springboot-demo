@@ -1,5 +1,5 @@
 
-package ll;
+package demo;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
@@ -33,8 +33,8 @@ public interface WebServiceImpl {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "save", targetNamespace = "http://impl.service.spring.com/", className = "ll.Save")
-    @ResponseWrapper(localName = "saveResponse", targetNamespace = "http://impl.service.spring.com/", className = "ll.SaveResponse")
+    @RequestWrapper(localName = "save", targetNamespace = "http://impl.service.spring.com/", className = "demo.Save")
+    @ResponseWrapper(localName = "saveResponse", targetNamespace = "http://impl.service.spring.com/", className = "demo.SaveResponse")
     @Action(input = "http://impl.service.spring.com/WebServiceImpl/saveRequest", output = "http://impl.service.spring.com/WebServiceImpl/saveResponse")
     public String save(
         @WebParam(name = "arg0", targetNamespace = "")
@@ -50,8 +50,8 @@ public interface WebServiceImpl {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "sayHello", targetNamespace = "http://impl.service.spring.com/", className = "ll.SayHello")
-    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://impl.service.spring.com/", className = "ll.SayHelloResponse")
+    @RequestWrapper(localName = "sayHello", targetNamespace = "http://impl.service.spring.com/", className = "demo.SayHello")
+    @ResponseWrapper(localName = "sayHelloResponse", targetNamespace = "http://impl.service.spring.com/", className = "demo.SayHelloResponse")
     @Action(input = "http://impl.service.spring.com/WebServiceImpl/sayHelloRequest", output = "http://impl.service.spring.com/WebServiceImpl/sayHelloResponse")
     public String sayHello(
         @WebParam(name = "arg0", targetNamespace = "")

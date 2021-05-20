@@ -1,5 +1,5 @@
 
-package ll;
+package demo;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "WebServiceImplService", targetNamespace = "http://impl.service.spring.com/", wsdlLocation = "http://localhost:8989/Webservice?WSDL")
+@WebServiceClient(name = "WebServiceImplService", targetNamespace = "http://impl.service.spring.com/", wsdlLocation = "http://localhost:8989/Webservice?wsdl")
 public class WebServiceImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class WebServiceImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8989/Webservice?WSDL");
+            url = new URL("http://localhost:8989/Webservice?wsdl");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }
